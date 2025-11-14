@@ -152,3 +152,4 @@ export async function validateMultipleCheckboxes(page, attr1, attr2) {
       }
 }
 
+
