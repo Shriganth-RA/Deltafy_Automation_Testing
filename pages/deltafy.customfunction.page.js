@@ -48,3 +48,5 @@ export async function validateInputFeilds(page, value, attr) {
       // Check the value in the feilds
       await expect(feildInput).toHaveValue(value);
 }
+
+

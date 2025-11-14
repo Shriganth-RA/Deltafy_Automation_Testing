@@ -86,5 +86,8 @@ test.describe('Validate the Home page', () => {
             // Validate the Section_2 feilds
 
             // Validate the Section_3 feilds
+
+
       })
 })
+
