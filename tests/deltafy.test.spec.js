@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { clickMenuItem, checkurl, clickButton, validateInputFeilds } from '../pages/customfunction.page';
+import { clickMenuItem, checkurl, clickButton, validateInputFeilds } from '../pages/deltafy.customfunction.page';
 
 test.describe('Validate the Header section', () => {
       test('Validate Navigation Menu', async ({ page }) => {
