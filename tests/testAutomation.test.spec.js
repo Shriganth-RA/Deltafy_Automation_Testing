@@ -1,6 +1,6 @@
 import {expect, test} from '@playwright/test'
 import { beforeEach } from 'node:test'
-import { clickMenuItem, checkurl, validateInputFeilds, validateRadioFeilds, validateDropdownFeilds, validateDatepickerFeilds, validateSingleUpload, validateMultipleUploads } from '../pages/testAuto.customfunction.page';
+import { clickMenuItem, checkurl, validateInputFeilds, validateRadioFeilds, validateDropdownFeilds, validateDatepickerFeilds, validateSingleUpload, validateMultipleUploads, clickButton } from '../pages/testAuto.customfunction.page';
 
 test.describe('Validate the header section', () => {
       test.beforeEach(async ({page}) => {
@@ -81,11 +81,19 @@ test.describe('Validate the Home page', () => {
             
 
             // Validate the Section_1 feilds
-            // await validateInputFeilds();
+            await validateInputFeilds(page, "google.com", 'input[name="input1"]');
+            // Click the submit button
+            await clickButton(page, 'button[id="btn1"]', "Submit");
 
             // Validate the Section_2 feilds
+            await validateInputFeilds(page, "Lorem ipsum", 'input[name="input2"]');
+            // Click the submit button
+            await clickButton(page, 'button[id="btn2"]', "Submit");
 
             // Validate the Section_3 feilds
+            await validateInputFeilds(page, "yahoo.in", 'input[name="input3"]');
+            // Click the submit button
+            await clickButton(page, 'button[id="btn3"]', "Submit");
 
 
       })
